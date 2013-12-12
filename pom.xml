@@ -21,6 +21,42 @@
 		<module>site</module>
 	</modules>
 	<repositories>
+		<!-- All these replace the need to rely on composite or aggregate.
+		It offers better control on a per-project basis.
+		To run build without composite, use "mvn clean verify -P\!jbosstools-site"
+		-->
+		<repository>
+			<id>jbosstools-base</id>
+			<layout>p2</layout>
+			<url>http://download.jboss.org/jbosstools/builds/staging/jbosstools-base_${jbosstools-site-stream}/all/repo</url>
+		</repository>
+		<repository>
+			<id>jbosstools-jst</id>
+			<layout>p2</layout>
+			<url>http://download.jboss.org/jbosstools/builds/staging/jbosstools-jst_${jbosstools-site-stream}/all/repo</url>
+		</repository>
+		<repository>
+			<id>jbosstools-server</id>
+			<layout>p2</layout>
+			<url>http://download.jboss.org/jbosstools/builds/staging/jbosstools-server_${jbosstools-site-stream}/all/repo</url>
+		</repository>
+		<repository>
+			<id>jbosstools-hibernate</id>
+			<layout>p2</layout>
+			<url>http://download.jboss.org/jbosstools/builds/staging/jbosstools-hibernate_${jbosstools-site-stream}/all/repo</url>
+		</repository>
+		<repository>
+			<id>jbosstools-vpe</id>
+			<layout>p2</layout>
+			<url>http://download.jboss.org/jbosstools/builds/staging/jbosstools-vpe_${jbosstools-site-stream}/all/repo</url>
+		</repository>
+		<!-- Should it be moved to target definition? -->
+		<repository>
+			<id>jbosstools-xulrunner</id>
+			<layout>p2</layout>
+			<url>http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/</url>
+		</repository>
+
 		<!-- To resolve parent artifact -->
 		<repository>
 			<id>jboss-public-repository-group</id>
